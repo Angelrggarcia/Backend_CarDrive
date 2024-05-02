@@ -76,9 +76,13 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.oracle",
+        "NAME": "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.mx-queretaro-1.oraclecloud.com))(connect_data=(service_name=g0361f4a3c6051f_database_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))",
+        "USER": "ADMIN",
+        "PASSWORD": "Foreverz#115",
+        "HOST": "",
+        "PORT": "",
     }
 }
 
