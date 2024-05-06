@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from api.api import proyectosAPIViews
+from api.api import unidadesAPIViews
+from api.api import archivosAPIViews
+from api.api import carpetasAPIViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('proyectos/', proyectosAPIViews.as_view(), name = 'proyecto_api'),
+    path('unidades/', unidadesAPIViews.as_view(), name = 'unidades_api'),
+    path('archivos/', archivosAPIViews.as_view(), name = 'archivos_api'),
+    path('carpetas/', carpetasAPIViews.as_view(), name = 'carpetas_api'),
 ]
+
+
+

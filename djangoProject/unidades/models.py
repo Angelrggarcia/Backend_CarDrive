@@ -7,6 +7,6 @@ class unidades(models.Model):
     imagen = models.BinaryField()
     proyectoId = models.ForeignKey('proyectos.Proyecto', on_delete = models.CASCADE)
 # Create your models here.
-def __str__(self):
-    return self.unidades
+    def __str__(self):
+        return self.unidades
 
