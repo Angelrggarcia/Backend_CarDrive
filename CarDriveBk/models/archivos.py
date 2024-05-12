@@ -1,6 +1,6 @@
 from django.db import models
 
-from .unidades import unidades
+from .apartado import unidades
 from .users import usuarios
 # Create your models here.
 

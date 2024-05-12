@@ -1,6 +1,7 @@
 from django.db import models
-from usuarios.models import usuarios
-from unidades.models import unidades
+from .users import usuarios
+from .apartado import Apartado
+from .proyectos import Proyecto
 
 # Create your models here.
 class Proyecto(models.Model):
@@ -8,7 +9,7 @@ class Proyecto(models.Model):
     descripcion = models.CharField(max_length=300, blank=True)
     color = models.CharField(max_length=6)
     imagen = models.ImageField(upload_to='imagenes_proyectos/')
-    creator = models.ForeignKey(User, on_delete=models.CASCADE)  # Link to the user model
+    creator = models.ForeignKey(usuarios, on_delete=models.CASCADE)  # Link to the user model
     
     def __str__(self):  
         return self.proyectos
