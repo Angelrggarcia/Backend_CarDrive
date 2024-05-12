@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,13 +76,16 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.oracle",
-        "NAME": "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.mx-queretaro-1.oraclecloud.com))(connect_data=(service_name=g0361f4a3c6051f_database_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))",
-        "USER": "ADMIN",
-        "PASSWORD": "Foreverz#115",
-        "HOST": "",
-        "PORT": "",
+    'default': {
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'database_high',
+        'USER': 'ADMIN',
+        'PASSWORD': 'Foreverz#115',
+        'OPTIONS': {
+            "config_dir": os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'CarDriveDB')),
+            "wallet_location": os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'CarDriveDB')),
+            "wallet_password": "Foreverz#115"
+        }
     }
 }
 
