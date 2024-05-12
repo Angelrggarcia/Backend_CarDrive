@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from ..models.archivos import Archivo
+from ..models.archivos import Archivos
 
 class ArchivoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Archivo
+        model = Archivos
         fields = '__all__'

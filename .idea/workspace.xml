@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/cwallet.sso" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/ewallet.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/ewallet.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/keystore.jks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/ojdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/sqlnet.ora" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/tnsnames.ora" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveDB/truststore.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Backend_CarDrive.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Backend_CarDrive.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/settings/local.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713203229458</updated>
       <workItem from="1713203230512" duration="18000" />
-      <workItem from="1715544243292" duration="2297000" />
+      <workItem from="1715544243292" duration="3261000" />
     </task>
     <servers />
   </component>

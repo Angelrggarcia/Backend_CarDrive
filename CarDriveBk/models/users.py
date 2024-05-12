@@ -3,7 +3,7 @@ from django.db import models
 
 
 # Create your models here.
-class usuarios(models.Model):
+class Usuario(models.Model):
     id = models.AutoField(primary_key = True)
     nombre = models.CharField(max_length = 40, null = False)
     emial = models.CharField(max_length = 60, null = False)

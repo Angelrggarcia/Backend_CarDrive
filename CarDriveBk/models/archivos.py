@@ -1,19 +1,18 @@
 from django.db import models
 
-from .apartado import unidades
-from .users import usuarios
+from .apartado import Apartado
+from .users import Usuario
 # Create your models here.
 
-class archivos(models.Model):
+class Archivos(models.Model):
     id = models.AutoField(prymary_key = True)
     nombre = models.CharField(max_length = 32, null = False)
     descripcion = models.CharField(max_length = 150)
     terminacion = models.CharField(max_length = 10, null = False)
     fecha = models.DateField()
     # llaves foraneas 
-    id_usuarios = models.ForeignKey(usurio, on_delete = models.CASCADE)
-    id_carpetas = models.ForeignKey(carpetas, on_delete = models.CASCADE)
-    id_unidades = models.ForeignKey(unidades, on_delete = models.CASCADE)
+    id_usuarios = models.ForeignKey(Usuario, on_delete = models.CASCADE)
+    id_unidades = models.ForeignKey(Apartado, on_delete = models.CASCADE)
 
     def __str__(self):
         return self.rchivos

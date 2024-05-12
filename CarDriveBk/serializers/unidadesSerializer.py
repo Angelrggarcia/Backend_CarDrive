@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from ..models import Apartado
+from ..models.apartado import Apartado
 
 class ApartadoSerializer(serializers.ModelSerializer):
     class Meta:
