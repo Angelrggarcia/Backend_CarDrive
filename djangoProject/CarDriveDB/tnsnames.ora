@@ -1,8 +1,0 @@
-database_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.mx-queretaro-1.oraclecloud.com))(connect_data=(service_name=g0361f4a3c6051f_database_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
-
-database_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.mx-queretaro-1.oraclecloud.com))(connect_data=(service_name=g0361f4a3c6051f_database_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
-
-database_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.mx-queretaro-1.oraclecloud.com))(connect_data=(service_name=g0361f4a3c6051f_database_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
-
-
-
