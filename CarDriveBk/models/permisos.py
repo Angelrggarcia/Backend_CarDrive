@@ -1,7 +1,7 @@
 from django.db import models
-from usuarios.models import usuarios
-from unidades.models import unidades
-from proyectos.models import proyecto
+from .users import usuarios
+from .apartado import Apartado
+from .proyectos import proyecto
 
 class proyectleader(models.Model):
     id_proyecto = models.ForeignKey(proyecto, on_delete = models.CASCADE)

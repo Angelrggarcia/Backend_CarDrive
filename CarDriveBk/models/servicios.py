@@ -1,6 +1,6 @@
 from django.db import models
-from usuarios.models import usuarios
-from archivos.models import archivos
+from .users import usuarios
+from .archivos import archivos
 
 # Create your models here.
 

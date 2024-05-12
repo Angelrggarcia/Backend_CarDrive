@@ -1,7 +1,7 @@
 from django.db import models
 
-from unidades.models import unidades
-from usuarios.models import usuarios
+from .unidades import unidades
+from .users import usuarios
 # Create your models here.
 
 class archivos(models.Model):
