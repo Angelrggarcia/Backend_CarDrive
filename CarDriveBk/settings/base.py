@@ -27,7 +27,6 @@ BASE_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'CarDrive.apps.CardriveConfig',
 ]
 
 LOCAL_APPS = [
@@ -35,7 +34,6 @@ LOCAL_APPS = [
 ]
 
 THIRD_APPS = [
-    'rest_framework',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
@@ -52,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'djangoProject.urls'
+ROOT_URLCONF = 'CarDriveBk.urls'
 
 TEMPLATES = [
     {

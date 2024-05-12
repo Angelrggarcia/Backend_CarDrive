@@ -1,3 +1,5 @@
+import os
+
 from .base import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -8,8 +10,15 @@ ALLOWED_HOSTS = []
 from .base import *
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'database_high',
+        'USER': 'ADMIN',
+        'PASSWORD': 'Foreverz#115',
+        'OPTIONS': {
+            "config_dir": os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'CarDriveDB')),
+            "wallet_location": os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'CarDriveDB')),
+            "wallet_password": "Foreverz#115"
+        }
     }
 }
 
