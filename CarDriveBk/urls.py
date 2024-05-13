@@ -17,12 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from CarDriveBk.views.proyectoView import ProyectoView
+from CarDriveBk.views.usuarioView import UsuarioView
+from CarDriveBk.views.proyectosView import ProyectoView
+from CarDriveBk.views.apartadoView import ApartadoView
+#from CarDriveBk.views.permisosView import ProyectoleaderView
 
 router = DefaultRouter()
 router.register("proyectos", ProyectoView)
-# router.register(r'usuarios', UsuarioViewSet)
-# router.register(r'apartados', ApartadoViewSet)
+router.register("usuarios", UsuarioView)
+router.register("apartados", ApartadoView)
+#router.register("proyectleaders", ProyectoleaderView)
+#router.register("proyectos", ProyectoView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -12,4 +12,4 @@ class Usuario(models.Model):
     imagen = models.BinaryField()
     
     def __str__(self):
-        return self.personas
+        return self.nombre

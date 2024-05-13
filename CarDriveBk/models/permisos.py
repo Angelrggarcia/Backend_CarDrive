@@ -8,18 +8,18 @@ class Proyectleader(models.Model):
     id_usuario = models.ForeignKey(Usuario, on_delete = models.CASCADE)
 
     def __str__(self):
-        return self.proyectleader
+        return self.id_usuario
     
 class Coordinador(models.Model):
     id_apartado = models.ForeignKey(Apartado, on_delete = models.CASCADE)
     id_usuario = models.ForeignKey(Usuario, on_delete = models.CASCADE)
     
     def __str__(self):
-        return self.coordinador
+        return self.id_usuario
 
 class Miembro(models.Model):
     id_apartado = models.ForeignKey(Apartado, on_delete = models.CASCADE)
     id_usuario = models.ForeignKey(Usuario, on_delete = models.CASCADE)
 
     def __str__(self):
-        return self.miembro
+        return self.id_usuario
