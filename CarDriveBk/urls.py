@@ -17,12 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
+from CarDriveBk.views.proyectoView import ProyectoView
 
 router = DefaultRouter()
-router.register(r'proyectos', ProyectoViewSet)
-router.register(r'usuarios', UsuarioViewSet)
-router.register(r'apartados', ApartadoViewSet)
+router.register("proyectos", ProyectoView)
+# router.register(r'usuarios', UsuarioViewSet)
+# router.register(r'apartados', ApartadoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls)), 
+    path('api-auth/', include('rest_framework.urls')) # por que no funciona?
+
 ]

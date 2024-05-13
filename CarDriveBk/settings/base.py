@@ -27,6 +27,7 @@ BASE_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'CarDriveBk',
 ]
 
 LOCAL_APPS = [
@@ -70,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangoProject.wsgi.application'
+WSGI_APPLICATION = 'CarDriveBk.wsgi.application'
 
 
 # Password validation
