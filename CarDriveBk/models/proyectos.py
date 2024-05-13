@@ -14,17 +14,9 @@ class Proyecto(models.Model):
     def __str__(self):  
         return self.proyectos
     
-class archivados(models.Model):
+class Archivados(models.Model):
     id_usuario = models.ForeignKey(Usuario, on_delete = models.CASCADE)
     id_proyecto = models.ForeignKey(Proyecto, on_delete = models.CASCADE)
     
     def __str__(self):
         return self.archivados
-    
-class miembros(models.Model):
-    id_usuario = models.ForeignKey(Usuario, on_delete = models.CASCADE)
-    id_unidades = models.ForeignKey(Apartado, on_delete = models.CASCADE)
-    
-    def __str__(self):
-        return self.miembros
-    
