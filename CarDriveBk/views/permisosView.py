@@ -9,16 +9,6 @@ class ProyectoleaderView(viewsets.ModelViewSet):
     serializer_class = ProyectoLeaderSerializer
 
 
-class ProyectleaderListCreate(generics.ListCreateAPIView):
-    queryset = Proyectleader.objects.all()
-    serializer_class = ProyectoLeaderSerializer
-
-
-class ProyectleaderDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Proyectleader.objects.all()
-    serializer_class = ProyectoLeaderSerializer
-
-
 class CoordinadorListCreate(generics.ListCreateAPIView):
     queryset = Coordinador.objects.all()
     serializer_class = CoordinadorSerializer
