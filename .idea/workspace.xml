@@ -5,35 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/serializers/apartadosSerializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/permisosView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/proyectosView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/usuarioView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/versionView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenes_proyectos/gato_solo_un_gato.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenes_proyectos/gato_solo_un_gato_IWfO9Gq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0002_etiquetas_archivos_asociar_etiquetas_version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0003_favoritos_recientes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/models/etiquetas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/serializers/etiquetasSerializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/etiquetasView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/apartado.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/apartado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/archivos.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/archivos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/models/permisos.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/permisos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/servicios.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/servicios.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/proyectoSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/proyectoSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/versiones.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/versiones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/settings.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/proyectoView.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/README" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/cwallet.sso" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/cwallet.sso" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/ewallet.p12" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/ewallet.p12" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/ewallet.pem" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/ewallet.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/keystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/keystore.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/ojdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/ojdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/sqlnet.ora" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/sqlnet.ora" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/truststore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/truststore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/permisosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/permisosView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/versionView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/versionView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +96,7 @@
       <workItem from="1715544243292" duration="3261000" />
       <workItem from="1715560848331" duration="959000" />
       <workItem from="1715577378625" duration="1976000" />
-      <workItem from="1715579397334" duration="5697000" />
+      <workItem from="1715579397334" duration="14995000" />
     </task>
     <servers />
   </component>
@@ -114,5 +105,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

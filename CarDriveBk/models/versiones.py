@@ -8,4 +8,4 @@ class Version(models.Model):
 
 
     def __str__(self):
-        return self.favoritos
+        return self.id_archivo.__str__() + " - " + self.iteracion.__str__()

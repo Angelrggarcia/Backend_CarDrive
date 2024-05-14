@@ -7,12 +7,14 @@ from .archivos import Archivos
 class Favoritos(models.Model):
     id_usuario = models.ForeignKey(Usuario, on_delete = models.CASCADE)
     id_archivo = models.ForeignKey(Archivos, on_delete = models.CASCADE)
-    
-    
+
+
     def __str__(self):
-        return self.favoritos
+        return self.id_usuario.__str__() + " - " + self.id_archivo.__str__()
     
-class Recientes(models.Models):
+class Recientes(models.Model):
     id_usuario = models.ForeignKey(Usuario, on_delete = models.CASCADE)
     id_archivo = models.ForeignKey(Archivos, on_delete = models.CASCADE)
     tiempo = models.DateTimeField()
+    def __str__(self):
+        return self.id_usuario.__str__() + " - " + self.id_archivo.__str__()

@@ -1,8 +1,7 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 
 from ..models.permisos import Proyectleader, Coordinador, Miembro
 from ..serializers.permisosSerializer import ProyectoLeaderSerializer, CoordinadorSerializer, MiembroSerializer
-
 
 
 class ProyectoleaderView(viewsets.ModelViewSet):

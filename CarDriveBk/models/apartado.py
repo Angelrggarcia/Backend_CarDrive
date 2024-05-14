@@ -2,6 +2,7 @@ from django.db import models
 from .proyectos import Proyecto
 from .users import Usuario
 
+
 class Apartado(models.Model):
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=20)
@@ -12,7 +13,7 @@ class Apartado(models.Model):
     id_padre = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='subapartados')
     id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     id_proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE)
-# Create your models here.
-    def __str__(self):
-        return self.apartado
 
+    # Create your models here.
+    def __str__(self):
+        return self.id

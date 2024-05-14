@@ -1,7 +1,12 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 
 from ..models.versiones import Version
 from ..serializers.versionSerializer import VersionSerializer
+
+
+class VersionsView(viewsets.ModelViewSet):
+    queryset = Version.objects.all()
+    serializer_class = VersionSerializer
 
 
 class VersionListCreate(generics.ListCreateAPIView):

@@ -1,7 +1,13 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 
-from ..models.archivos import Archivos, Etiquetas, Asociar_etiquetas
-from ..serializers.archivosSerializer import ArchivoSerializer, EtiquetaSerializer, AsociacionEtiquetaSerializer
+from ..models.archivos import Archivos
+from ..serializers.archivosSerializer import ArchivoSerializer
+
+
+
+class ArchivosView(viewsets.ModelViewSet):
+    queryset = Archivos.objects.all()
+    serializer_class = ArchivoSerializer
 
 
 class ArchivosListCreate(generics.ListCreateAPIView):
@@ -13,22 +19,3 @@ class ArchivosDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Archivos
     serializer_class = ArchivoSerializer
 
-
-class EtiquetasListCreate(generics.ListCreateAPIView):
-    queryset = Etiquetas
-    serializer_class = EtiquetaSerializer
-
-
-class EtiquetasDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Etiquetas
-    serializer_class = EtiquetaSerializer
-
-
-class Asociar_etiquetasCreate(generics.ListCreateAPIView):
-    queryset = Asociar_etiquetas
-    serializer_class = AsociacionEtiquetaSerializer
-
-
-class Asociar_etiquetasDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Asociar_etiquetas
-    serializer_class = AsociacionEtiquetaSerializer
