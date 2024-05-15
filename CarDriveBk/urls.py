@@ -27,6 +27,8 @@ from CarDriveBk.views.versionView import VersionsView
 from CarDriveBk.views.permisosView import ProyectoleaderView
 from CarDriveBk.views.serviciosView import RecientesView
 from CarDriveBk.views.serviciosView import FavoritosView
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = DefaultRouter()
 router.register("proyectos", ProyectoView)
@@ -43,6 +45,5 @@ router.register("recientes", RecientesView)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)), 
-    path('api-auth/', include('rest_framework.urls')) # por que no funciona?
-
-]
+    path('api-auth/', include('rest_framework.urls'))
+] 
