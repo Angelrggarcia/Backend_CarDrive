@@ -1,12 +1,10 @@
 from rest_framework import serializers
-from ..models.proyectos import Proyecto, Archivados
 
-class  ProyectoSerializer(serializers.ModelSerializer):
+from ..models.proyectos import Proyectos
+
+
+class ProyectoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Proyecto
+        model = Proyectos
         fields = '__all__'
 
-class  ArchivadosSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Archivados
-        fields = '__all__'

@@ -5,20 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0002_etiquetas_archivos_coordinador_asociar_etiquetas_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/views/registerView.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imagenes_proyectos/gato_solo_un_gato_mVNbq6l.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0002_etiquetas_archivos_asociar_etiquetas_version.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0003_favoritos_recientes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0002_etiquetas_archivos_coordinador_asociar_etiquetas_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/apartado.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/apartado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/archivos.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/archivos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/etiquetas.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/etiquetas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/permisos.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/permisos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/proyectos.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/proyectos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/servicios.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/servicios.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/versiones.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/versiones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/apartadosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/apartadosSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/etiquetasSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/etiquetasSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/permisosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/permisosSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/proyectoSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/proyectoSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/servicioSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/servicioSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/unidadesSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/unidadesSerializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/usuarioSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/usuarioSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/versionSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/versionSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/etiquetasView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/etiquetasView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/views/permisosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/permisosView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/views/proyectosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/proyectosView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/views/usuarioView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/usuarioView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/cwallet.sso" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/cwallet.sso" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/ewallet.p12" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/ewallet.p12" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/keystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/keystore.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveDB/truststore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveDB/truststore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/versionView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/versionView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,21 +66,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/angel/OneDrive/Documentos/GitHub/Backend_CarDrive",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/angel/OneDrive/Documentos/GitHub/Backend_CarDrive&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\angel\OneDrive\Documentos\GitHub\Backend_CarDrive" />
@@ -90,12 +110,25 @@
       <workItem from="1715544243292" duration="3261000" />
       <workItem from="1715560848331" duration="959000" />
       <workItem from="1715577378625" duration="1976000" />
-      <workItem from="1715579397334" duration="18632000" />
+      <workItem from="1715579397334" duration="19455000" />
+      <workItem from="1715718402182" duration="12890000" />
+      <workItem from="1715803989936" duration="9262000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

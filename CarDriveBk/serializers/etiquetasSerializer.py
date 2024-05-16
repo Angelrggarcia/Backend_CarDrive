@@ -1,11 +1,14 @@
 from rest_framework import serializers
-from ..models.etiquetas import Etiquetas
-from ..models.etiquetas import Asociar_etiquetas
 
-class AsociacionEtiquetaSerializer(serializers.ModelSerializer):
+from ..models.etiquetas import Etiquetas
+from ..models.etiquetas import RelacionesEtiquetas
+
+
+class RelacionesEtiquetaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Asociar_etiquetas
+        model = RelacionesEtiquetas
         fields = '__all__'
+
 
 class EtiquetaSerializer(serializers.ModelSerializer):
     class Meta:

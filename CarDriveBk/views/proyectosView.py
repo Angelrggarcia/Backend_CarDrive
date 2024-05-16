@@ -1,14 +1,10 @@
-from rest_framework import generics, viewsets
+from rest_framework import viewsets
 
-from ..models.proyectos import Proyecto, Archivados
-from ..serializers.proyectoSerializer import ProyectoSerializer, ArchivadosSerializer
+from ..models.proyectos import Proyectos
+from ..serializers.proyectoSerializer import ProyectoSerializer
 
 
-class ProyectoView(viewsets.ModelViewSet):
-    queryset = Proyecto.objects.all()
+class ProyectosView(viewsets.ModelViewSet):
+    queryset = Proyectos.objects.all()
     serializer_class = ProyectoSerializer
 
-
-class ArchivadosView(viewsets.ModelViewSet):
-    queryset = Archivados.objects.all()
-    serializer_class = ArchivadosSerializer

@@ -1,17 +1,13 @@
-from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
-from django.contrib.auth.hashers import make_password
 from django.core.validators import MinLengthValidator
-from django.utils.translation import gettext_lazy as _
 from django.core.validators import validate_email
+from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class UserManager(BaseUserManager):
 
     def create_user(self, email, password, **extrafields):
-        """
-        Create and save a user with the given email and password.
-        """
         if not email:
             raise ValueError(("Email must be set"))
         email = self.normalize_email(email)
@@ -22,9 +18,6 @@ class UserManager(BaseUserManager):
         return user
     
     def create_superuser(self, email, password, **extra_fields):
-        """
-        Create and save a superuser with the given email and password.
-        """
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
 
@@ -37,13 +30,14 @@ class UserManager(BaseUserManager):
  
 
 # Create your models here.
-class Usuario(AbstractBaseUser):
+class Usuarios(AbstractBaseUser):
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=40, null=False)
     email = models.EmailField(unique=True, null=False, validators=[validate_email])
     password = models.CharField(_("password"), max_length=128, validators=[MinLengthValidator(6)])
+    color = models.CharField(max_length=6)
     fecha = models.DateField(null=False)
-    imagen = models.ImageField()
+    imagen = models.ImageField(null=True, blank=True)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['nombre', 'fecha_nacimiento'] 
     

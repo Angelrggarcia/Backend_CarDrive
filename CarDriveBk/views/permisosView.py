@@ -1,6 +1,6 @@
 from rest_framework import generics, viewsets
 
-from ..models.permisos import Proyectleader, Coordinador, Miembro
+from ..models.permisos import Proyectleader, Coordinador, Miembros
 from ..serializers.permisosSerializer import ProyectoLeaderSerializer, CoordinadorSerializer, MiembroSerializer
 
 
@@ -9,21 +9,11 @@ class ProyectoleaderView(viewsets.ModelViewSet):
     serializer_class = ProyectoLeaderSerializer
 
 
-class CoordinadorListCreate(generics.ListCreateAPIView):
+class CoordinadoresView(viewsets.ModelViewSet):
     queryset = Coordinador.objects.all()
     serializer_class = CoordinadorSerializer
 
 
-class CoordinadorDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Coordinador.objects.all()
-    serializer_class = CoordinadorSerializer
-
-
-class MiembroListCreate(generics.ListCreateAPIView):
-    queryset = Miembro.objects.all()
-    serializer_class = MiembroSerializer
-
-
-class MiembroDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Miembro.objects.all()
+class MiembrosView(viewsets.ModelViewSet):
+    queryset = Miembros.objects.all()
     serializer_class = MiembroSerializer

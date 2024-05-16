@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from CarDriveBk.views.usuarioView import UsuarioView
-from CarDriveBk.views.proyectosView import ProyectoView
-from CarDriveBk.views.proyectosView import ArchivadosView
+
+from CarDriveBk.views.registerView import RegisterView
+from CarDriveBk.views.usuarioView import UsuariosView
+from CarDriveBk.views.proyectosView import ProyectosView
 from CarDriveBk.views.apartadoView import ApartadoView
 from CarDriveBk.views.archivosView import ArchivosView
 from CarDriveBk.views.etiquetasView import EtiquetasView
@@ -27,15 +28,12 @@ from CarDriveBk.views.versionView import VersionsView
 from CarDriveBk.views.permisosView import ProyectoleaderView
 from CarDriveBk.views.serviciosView import RecientesView
 from CarDriveBk.views.serviciosView import FavoritosView
-from django.conf import settings
-from django.conf.urls.static import static
 
 router = DefaultRouter()
-router.register("proyectos", ProyectoView)
-router.register("usuarios", UsuarioView)
+router.register("proyectos", ProyectosView)
+router.register("usuarios", UsuariosView)
 router.register("apartados", ApartadoView)
 router.register("proyectleaders", ProyectoleaderView)
-router.register("archivados", ArchivadosView)
 router.register("archivos", ArchivosView)
 router.register("etiquetas", EtiquetasView)
 router.register("versiones", VersionsView)
@@ -44,6 +42,7 @@ router.register("recientes", RecientesView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register/', RegisterView.as_view()),
     path('api/', include(router.urls)), 
     path('api-auth/', include('rest_framework.urls'))
 ] 
