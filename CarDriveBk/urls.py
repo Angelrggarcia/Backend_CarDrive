@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
+from django.conf import settings  # Added import
+from django.conf.urls.static import static  # Added import
 
 from CarDriveBk.views.registerView import RegisterView
 from CarDriveBk.views.usuarioView import UsuariosView
@@ -50,3 +52,6 @@ urlpatterns = [
     path('api/', include(router.urls)), 
     path('api-auth/', include('rest_framework.urls'))
 ] 
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
