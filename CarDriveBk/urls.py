@@ -24,8 +24,9 @@ from CarDriveBk.views.proyectosView import ProyectosView
 from CarDriveBk.views.apartadoView import ApartadoView
 from CarDriveBk.views.archivosView import ArchivosView
 from CarDriveBk.views.etiquetasView import EtiquetasView
+from CarDriveBk.views.etiquetasView import RelacionesEtiquetasView
 from CarDriveBk.views.versionView import VersionsView
-from CarDriveBk.views.permisosView import ProyectoleaderView
+from CarDriveBk.views.permisosView import ProyectoleaderView, CoordinadoresView, MiembrosView
 from CarDriveBk.views.serviciosView import RecientesView
 from CarDriveBk.views.serviciosView import FavoritosView
 
@@ -34,8 +35,11 @@ router.register("proyectos", ProyectosView)
 router.register("usuarios", UsuariosView)
 router.register("apartados", ApartadoView)
 router.register("proyectleaders", ProyectoleaderView)
+router.register("coordinadores", CoordinadoresView)
+router.register("miembros", MiembrosView)
 router.register("archivos", ArchivosView)
 router.register("etiquetas", EtiquetasView)
+router.register("retiquetas", RelacionesEtiquetasView)
 router.register("versiones", VersionsView)
 router.register("favoritos", FavoritosView)
 router.register("recientes", RecientesView)

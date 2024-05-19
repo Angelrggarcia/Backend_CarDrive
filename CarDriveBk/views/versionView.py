@@ -1,4 +1,4 @@
-from rest_framework import generics, viewsets
+from rest_framework import viewsets
 
 from ..models.versiones import Versiones
 from ..serializers.versionSerializer import VersionSerializer

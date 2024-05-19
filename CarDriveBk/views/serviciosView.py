@@ -1,4 +1,4 @@
-from rest_framework import generics, viewsets
+from rest_framework import viewsets
 
 from ..models.servicios import Recientes, Favoritos
 from ..serializers.servicioSerializer import RecienteSerializer, FavoritoSerializer

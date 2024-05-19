@@ -1,4 +1,4 @@
-from rest_framework import generics, viewsets
+from rest_framework import viewsets
 
 from ..models.archivos import Archivos
 from ..serializers.archivosSerializer import ArchivoSerializer

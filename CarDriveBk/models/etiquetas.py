@@ -15,8 +15,5 @@ class RelacionesEtiquetas(models.Model):
     id_archivos = models.ForeignKey(Archivos, on_delete=models.CASCADE)
     id_etiquetas = models.ForeignKey(Etiquetas, on_delete=models.CASCADE)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(args, kwargs)
-
     def __str__(self):
         return f" {self.id_archivos}" + f" {self.id_etiquetas}"
