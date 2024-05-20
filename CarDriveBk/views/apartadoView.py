@@ -8,4 +8,4 @@ class ApartadoView(viewsets.ModelViewSet):
     queryset = Apartados.objects.all()  # Add this line
     serializer_class = ApartadosSerializer
     filter_backends = (filters.SearchFilter,)
-    search_fields = ('nombre', 'id')
+    search_fields = ('id_proyecto__id',)

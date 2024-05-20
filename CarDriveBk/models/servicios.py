@@ -15,5 +15,6 @@ class Favoritos(models.Model):
 class Recientes(models.Model):
     id_usuario = models.ForeignKey(Usuarios, on_delete = models.CASCADE)
     id_archivo = models.ForeignKey(Archivos, on_delete = models.CASCADE)
+    tiempo = models.TimeField(auto_now=True)
     def __str__(self):
         return self.id_usuario.__str__() + " - " + self.id_archivo.__str__()

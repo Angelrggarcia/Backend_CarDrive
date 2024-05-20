@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/02f019bc-7280-440f-84dc-17159deb4313.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/7edcc8f0-3bb3-4baf-b423-52ae37493d2d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/fd8d63c5-8719-4907-97de-4530f3c9b95c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/prueba.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/prueba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/0e2a7853-47c8-4227-8334-ffc371b06dcd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/141e03e3-8738-4e40-b7e2-0a01518860ea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/429e7d23-f573-41b8-b48a-84690a111903.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/57ea0300-639a-49af-85e0-e8e70d241553.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/836bb1fc-a92d-48fb-bc0e-95d7764acfee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/a422ca46-cd7c-4656-b6b1-f8f5456a876c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/c04405e2-1dd5-4a35-bd74-502041355392.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/e9f72577-f9ee-46c1-a236-f61625d9731d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0003_alter_proyectos_imagen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0004_alter_apartados_color.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0005_alter_apartados_fecha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0002_alter_usuarios_imagen.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0002_alter_proyectos_color.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/apartado.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/apartado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/proyectos.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/proyectos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/servicios.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/servicios.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/apartadosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/apartadosSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/proyectoSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/proyectoSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/proyectosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/proyectosView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +106,7 @@
       <workItem from="1715718402182" duration="12890000" />
       <workItem from="1715803989936" duration="14329000" />
       <workItem from="1715888070985" duration="11217000" />
-      <workItem from="1715961591389" duration="5013000" />
+      <workItem from="1715961591389" duration="36563000" />
     </task>
     <servers />
   </component>
