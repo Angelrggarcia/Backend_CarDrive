@@ -17,9 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from django.conf import settings  # Added import
-from django.conf.urls.static import static  # Added import
-
+from django.conf import settings  
+from django.conf.urls.static import static  
+# Imports de vistas
 from CarDriveBk.views.registerView import RegisterView
 from CarDriveBk.views.usuarioView import UsuariosView
 from CarDriveBk.views.proyectosView import ProyectosView
@@ -31,7 +31,7 @@ from CarDriveBk.views.versionView import VersionsView
 from CarDriveBk.views.permisosView import ProyectoleaderView, CoordinadoresView, MiembrosView
 from CarDriveBk.views.serviciosView import RecientesView
 from CarDriveBk.views.serviciosView import FavoritosView
-
+# rutas para las vistas
 router = DefaultRouter()
 router.register("proyectos", ProyectosView)
 router.register("usuarios", UsuariosView)
