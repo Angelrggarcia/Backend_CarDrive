@@ -3,6 +3,7 @@ from django.core.validators import MinLengthValidator
 from django.core.validators import validate_email
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.core.validators import RegexValidator
 
 
 class UserManager(BaseUserManager):
@@ -32,16 +33,18 @@ class UserManager(BaseUserManager):
 # Create your models here.
 class Usuarios(AbstractBaseUser):
     id = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=40, null=False)
+    first_name = models.CharField(max_length=40, null=False)
+    last_name = models.CharField(max_length=40, null=False, default="")
     email = models.EmailField(unique=True, null=False, validators=[validate_email])
     password = models.CharField(_("password"), max_length=128, validators=[MinLengthValidator(6)])
-    color = models.CharField(max_length=6)
-    fecha = models.DateField(null=False)
+    color = models.CharField(max_length=6, validators=[RegexValidator(r'^[0-9A-Fa-f]{6}$', 'Enter a valid hex color code')])
+    fecha = models.DateField(null=False,)
     imagen = models.ImageField(null=True, blank=True)
+    
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['nombre', 'fecha_nacimiento'] 
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'password', 'color']
     
     objects = UserManager()
 
     def __str__(self):
-        return self.nombre
+        return self.first_name

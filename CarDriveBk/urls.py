@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static  
 # Imports de vistas
 from CarDriveBk.views.registerView import RegisterView
-from CarDriveBk.views.usuarioView import UsuariosView
+from CarDriveBk.views.usuarioView import UsuariosView, LoginView
 from CarDriveBk.views.proyectosView import ProyectosView
 from CarDriveBk.views.apartadoView import ApartadoView
 from CarDriveBk.views.archivosView import ArchivosView
@@ -31,6 +31,8 @@ from CarDriveBk.views.versionView import VersionsView
 from CarDriveBk.views.permisosView import ProyectoleaderView, CoordinadoresView, MiembrosView
 from CarDriveBk.views.serviciosView import RecientesView
 from CarDriveBk.views.serviciosView import FavoritosView
+from rest_framework_simplejwt import views
+from rest_framework_simplejwt.views import TokenRefreshView
 # rutas para las vistas
 router = DefaultRouter()
 router.register("proyectos", ProyectosView)
@@ -50,7 +52,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', RegisterView.as_view()),
     path('api/', include(router.urls)), 
-    path('api-auth/', include('rest_framework.urls'))
+    path('api-auth/', include('rest_framework.urls')),
+    path('login/', LoginView.as_view()),
 ] 
 
 if settings.DEBUG:
