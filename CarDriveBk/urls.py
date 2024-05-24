@@ -33,7 +33,8 @@ from CarDriveBk.views.serviciosView import RecientesView
 from CarDriveBk.views.serviciosView import FavoritosView
 from rest_framework_simplejwt import views
 from rest_framework_simplejwt.views import TokenRefreshView
-# rutas para las vistas
+
+# Rutas para las vistas
 router = DefaultRouter()
 router.register("proyectos", ProyectosView)
 router.register("usuarios", UsuariosView)
@@ -44,7 +45,7 @@ router.register("miembros", MiembrosView)
 router.register("archivos", ArchivosView)
 router.register("etiquetas", EtiquetasView)
 router.register("retiquetas", RelacionesEtiquetasView)
-router.register("versiones", VersionsView)
+router.register(r'versiones', VersionsView)
 router.register("favoritos", FavoritosView)
 router.register("recientes", RecientesView)
 
