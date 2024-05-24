@@ -15,7 +15,7 @@ class CustomDateField(serializers.DateField):
             self.fail('invalid', format='DD/MM/YYYY')
 
 class UsuarioSerializer(serializers.ModelSerializer):
-    fecha = datetime.now().strftime('%d/%m/%Y')
+    fecha = datetime.now()
     class Meta:
         model = Usuarios
         fields = '__all__'
