@@ -18,6 +18,18 @@ class UsuariosView(viewsets.ModelViewSet):
     queryset = Usuarios.objects.all()
     serializer_class = UsuarioSerializer
     
+    def create(self, request):
+        serializer = UsuarioSerializer(data=request.data)
+        print(request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            response = UsuarioSerializer(instance=user, context={'request': request})
+            return Response(response.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+
+    
     @action(methods=["POST"], detail=False, serializer_class=LoginSerializer, permission_classes=[AllowAny])
     def login(self, request):
         email = request.data.get('email')
@@ -33,27 +45,6 @@ class UsuariosView(viewsets.ModelViewSet):
         else:
             return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
     
-    def create(self, request):
-        serializer = UsuarioSerializer(data=request.data)
-        user = None
-        if serializer.is_valid():
-            user = Usuarios.objects.create_user(
-                email = serializer.validated_data["email"], 
-                password = serializer.validated_data["password"], 
-                first_name = serializer.validated_data["first_name"], 
-                last_name = serializer.validated_data["last_name"], 
-                #last_login = serializer.validated_data["last_login"],
-            )
-            user.last_login = timezone.now()  # Instead of validating data, set the last login manually to right now since it wont get posted
-            user.save()
-            response = UsuarioSerializer(instance=user, context={'request': request} )
-
-            return Response(response.data, status=status.HTTP_200_OK)
-        
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
-
 class LoginView(APIView):
     def post(self, request):
         email = request.data.get('email')

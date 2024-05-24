@@ -9,13 +9,13 @@ class CustomDateField(serializers.DateField):
 
     def to_internal_value(self, data):
         try:
-            # Parsing date in YYYY-MM-DD format
-            return datetime.strptime(data, '%d/%m/%Y').date()
+            # Parsear la fecha en formato YYYY-MM-DD
+            return datetime.strptime(data, '%Y-%m-%d').date()
         except ValueError:
-            self.fail('invalid', format='DD/MM/YYYY')
+            self.fail('invalid', format='YYYY-MM-DD')
 
 class UsuarioSerializer(serializers.ModelSerializer):
-    fecha = datetime.now()
+    fecha = CustomDateField(format='%d/%m/%Y', input_formats=['%d/%m/%Y'])
     class Meta:
         model = Usuarios
         fields = '__all__'
@@ -23,9 +23,9 @@ class UsuarioSerializer(serializers.ModelSerializer):
             'password': {'write_only': True},
         }
         
-    def create(self, validated_data):
-        user = Usuarios.objects.create_user(**validated_data)
-        return user
+    # def create(self, validated_data):
+    #     user = Usuarios.objects.create_user(**validated_data)
+    #     return user
         
 class LoginSerializer(serializers.Serializer):
     password = serializers.CharField(

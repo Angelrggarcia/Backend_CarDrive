@@ -44,8 +44,8 @@ THIRD_APPS = [
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
 
 REST_FRAMEWORK = {
-    'DATETIME_FORMAT': "%Y-%m-%d",
-    'DATE_FORMAT': "%Y-%m-%d",
+    'DATETIME_FORMAT': "%d-%m-%Y",
+    'DATE_FORMAT': "%d-%m-%Y",
 }
 
 SIMPLE_JWT = {
