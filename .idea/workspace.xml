@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/2e6173da-ffd7-4ee4-9ff5-b1ecfdf5ba26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/b8d872f2-7cc4-43c3-89dd-3fcc421210a3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/3ec809fd-eafc-43a2-a59f-00adf7f0395d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/401e1827-ebca-4d72-b9db-6174753ac8c2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/69696958-f24d-4847-ac3f-ea3a8566547e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/f19281eb-4cf8-491b-b65c-f74a1a759650.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagen_2024-05-22_193922665.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagen_2024-05-23_130446730.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/57766f44-ab14-4d01-a27b-e385da3fa66b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/b915daeb-9139-4a3f-81d0-c3983d7159f7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/c2b9a21e-61dd-4d78-b3e2-22c7e05f827e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/e322242f-6321-4245-8cb2-d47afd8dd3eb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/1f8656ab-c0eb-4e35-96b1-0778a24ad084.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/5d3f83b9-f738-4b0b-a8e5-23bf01f519ce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/7d58c420-ed0c-42db-a252-85e2f6d854a6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +93,8 @@
       <workItem from="1715803989936" duration="14329000" />
       <workItem from="1715888070985" duration="11217000" />
       <workItem from="1715961591389" duration="45264000" />
-      <workItem from="1716263318759" duration="1634000" />
+      <workItem from="1716263318759" duration="2228000" />
+      <workItem from="1716427400358" duration="13798000" />
     </task>
     <servers />
   </component>
