@@ -14,7 +14,9 @@ from ..models.versiones import Versiones
 from django.utils import timezone
 
 class ViewTests(TestCase):
-
+    
+    
+    @pytest.mark.django_db
     def setUp(self):
         self.client = APIClient()
         self.user = Usuarios.objects.create_user(
@@ -25,7 +27,7 @@ class ViewTests(TestCase):
             color="FFFFFF",
             fecha=timezone.now()
         )
-
+        
         self.client.force_authenticate(user=self.user)
 
         self.proyecto = Proyectos.objects.create(
@@ -60,34 +62,42 @@ class ViewTests(TestCase):
             color="#FFFFFF"
         )
 
+    @pytest.mark.django_db
     def test_apartados_list_view(self):
         response = self.client.get(reverse('apartado-list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+    @pytest.mark.django_db
     def test_archivos_list_view(self):
         response = self.client.get(reverse('archivo-list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-
+    
+    @pytest.mark.django_db
     def test_etiquetas_list_view(self):
         response = self.client.get(reverse('etiqueta-list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+    @pytest.mark.django_db
     def test_proyectos_list_view(self):
         response = self.client.get(reverse('proyectos-list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+    @pytest.mark.django_db
     def test_favoritos_list_view(self):
         response = self.client.get(reverse('favorito-list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+    @pytest.mark.django_db
     def test_recientes_list_view(self):
         response = self.client.get(reverse('reciente-list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+    @pytest.mark.django_db
     def test_usuarios_list_view(self):
         response = self.client.get(reverse('usuarios-list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+    @pytest.mark.django_db
     def test_versiones_list_view(self):
         response = self.client.get(reverse('version-list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)

@@ -12,6 +12,7 @@ from ..models.versiones import Versiones
 
 class ModelTests(TestCase):
 
+    @pytest.mark.django_db
     def setUp(self):
         self.user = Usuarios.objects.create_user(
             email="test@example.com",
@@ -90,38 +91,61 @@ class ModelTests(TestCase):
             id_usuario=self.user
         )
 
+    @pytest.mark.django_db
     def test_apartado_str(self):
         self.assertEqual(str(self.apartado), f"{self.apartado.id} - {self.apartado.nombre}")
 
+
+    @pytest.mark.django_db
     def test_archivo_str(self):
         self.assertEqual(str(self.archivo), self.archivo.nombre)
-
+    
+    
+    @pytest.mark.django_db
     def test_etiqueta_str(self):
         self.assertEqual(str(self.etiqueta), self.etiqueta.nombre)
 
+
+    @pytest.mark.django_db
     def test_relacion_etiqueta_str(self):
         self.assertEqual(str(self.relacion_etiqueta), f" {self.archivo} {self.etiqueta}")
 
+
+    @pytest.mark.django_db
     def test_proyecto_str(self):
         self.assertEqual(str(self.proyecto), self.proyecto.nombre)
 
+
+    @pytest.mark.django_db
     def test_favorito_str(self):
         self.assertEqual(str(self.favorito), f"{self.user} - {self.archivo}")
 
+
+    @pytest.mark.django_db
     def test_reciente_str(self):
         self.assertEqual(str(self.reciente), f"{self.user} - {self.archivo}")
 
+
+    @pytest.mark.django_db
     def test_usuario_str(self):
         self.assertEqual(str(self.user), self.user.first_name)
 
+
+    @pytest.mark.django_db
     def test_version_str(self):
         self.assertEqual(str(self.version), f"{self.archivo} - {self.version.iteracion}")
 
+
+    @pytest.mark.django_db
     def test_proyectleader_str(self):
         self.assertEqual(str(self.proyectleader), str(self.user))
 
+
+    @pytest.mark.django_db
     def test_coordinador_str(self):
         self.assertEqual(str(self.coordinador), str(self.user))
 
+
+    @pytest.mark.django_db
     def test_miembro_str(self):
         self.assertEqual(str(self.miembro), str(self.user))
