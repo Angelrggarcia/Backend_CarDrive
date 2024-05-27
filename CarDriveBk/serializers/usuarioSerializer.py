@@ -20,12 +20,28 @@ class UsuarioSerializer(serializers.ModelSerializer):
         model = Usuarios
         fields = '__all__'
         extra_kwargs = {
-            'password': {'write_only': True},
+            "password": {
+            #"write_only": True, por si no quiero que se acceda a la contraseña
+            "style":{"input_type":"password"}, 
+
+            },
+            "last_login": {
+            "read_only" : True    
+            }
         }
         
-    # def create(self, validated_data):
-    #     user = Usuarios.objects.create_user(**validated_data)
-    #     return user
+    def create(self, validated_data):
+        user = Usuarios(
+            email=validated_data['email'],
+            first_name=validated_data['first_name'],
+            last_name=validated_data['last_name'],
+            color=validated_data['color'],
+            fecha=validated_data['fecha'],
+            imagen=validated_data.get('imagen', None),
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
         
 class LoginSerializer(serializers.Serializer):
     password = serializers.CharField(

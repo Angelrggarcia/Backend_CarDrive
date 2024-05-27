@@ -128,7 +128,7 @@ class ModelTests(TestCase):
 
     @pytest.mark.django_db
     def test_usuario_str(self):
-        self.assertEqual(str(self.user), self.user.first_name)
+        self.assertEqual(str(self.user), self.user)
 
 
     @pytest.mark.django_db
