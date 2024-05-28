@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 from datetime import timedelta
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,8 +45,8 @@ THIRD_APPS = [
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
 
 REST_FRAMEWORK = {
-    'DATETIME_FORMAT': "%Y-%m-%d",
-    'DATE_FORMAT': "%Y-%m-%d",
+    'DATETIME_FORMAT': "%d-%m-%Y",
+    'DATE_FORMAT': "%d-%m-%Y",
 }
 
 SIMPLE_JWT = {
@@ -92,6 +93,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'CarDriveBk.urls'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
+
 
 TEMPLATES = [
     {

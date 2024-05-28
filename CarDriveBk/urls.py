@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static  
 # Imports de vistas
 from CarDriveBk.views.registerView import RegisterView
-from CarDriveBk.views.usuarioView import UsuariosView, LoginView
+from CarDriveBk.views.usuarioView import UsuariosView
 from CarDriveBk.views.proyectosView import ProyectosView
 from CarDriveBk.views.apartadoView import ApartadoView
 from CarDriveBk.views.archivosView import ArchivosView
@@ -54,7 +54,6 @@ urlpatterns = [
     path('register/', RegisterView.as_view()),
     path('api/', include(router.urls)), 
     path('api-auth/', include('rest_framework.urls')),
-    path('login/', LoginView.as_view()),
 ] 
 
 if settings.DEBUG:
