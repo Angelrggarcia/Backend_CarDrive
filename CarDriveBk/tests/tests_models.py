@@ -9,6 +9,8 @@ from ..models.proyectos import Proyectos
 from ..models.servicios import Favoritos, Recientes
 from ..models.users import Usuarios
 from ..models.versiones import Versiones
+from django.test import TestCase
+from django.utils import timezone
 
 class ModelTests(TestCase):
 
