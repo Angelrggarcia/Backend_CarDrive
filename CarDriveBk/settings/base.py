@@ -40,6 +40,7 @@ THIRD_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt.token_blacklist',
+    'rest_framework_simplejwt',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
@@ -47,6 +48,9 @@ INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
 REST_FRAMEWORK = {
     'DATETIME_FORMAT': "%d-%m-%Y",
     'DATE_FORMAT': "%d-%m-%Y",
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
 }
 
 SIMPLE_JWT = {
@@ -98,6 +102,10 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
+
 
 TEMPLATES = [
     {
@@ -135,6 +143,11 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200',  # URL de tu frontend de Angular
+    'http://127.0.0.1:4200',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True

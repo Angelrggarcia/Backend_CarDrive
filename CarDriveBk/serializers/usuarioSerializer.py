@@ -44,10 +44,12 @@ class UsuarioSerializer(serializers.ModelSerializer):
         return user
         
 class LoginSerializer(serializers.Serializer):
-    password = serializers.CharField(
-        required=True,
-        style={'input_type': 'password'}
-    )
-    email = serializers.EmailField(
-        required=True
-    )
+    email = serializers.EmailField()
+    password = serializers.CharField(write_only=True)
+
+    def validate(self, data):
+        email = data.get('email')
+        password = data.get('password')
+        if not email or not password:
+            raise serializers.ValidationError("Both fields are required.")
+        return data
