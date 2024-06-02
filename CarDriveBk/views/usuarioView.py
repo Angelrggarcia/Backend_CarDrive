@@ -19,7 +19,12 @@ class UsuariosView(viewsets.ModelViewSet):
     authentication_classes = [JWTAuthentication]
     
     def create(self, request):
-        serializer = UsuarioSerializer(data=request.data)
+        
+        data = request.data.copy()  # Copia los datos de la solicitud
+        data['fecha'] = timezone.now().date().strftime('%Y-%m-%d') 
+
+        serializer = UsuarioSerializer(data=data)
+        
         if serializer.is_valid():
             user = serializer.save()
             response = UsuarioSerializer(instance=user, context={'request': request})

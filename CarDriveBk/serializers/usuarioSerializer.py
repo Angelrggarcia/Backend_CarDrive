@@ -5,7 +5,7 @@ from ..models.users import Usuarios
 class CustomDateField(serializers.DateField):
     def to_representation(self, value):
         # Representing date in DD/MM/YYYY format
-        return value.strftime('%d/%m/%Y')
+        return value.strftime('%Y/%m/%d')
 
     def to_internal_value(self, data):
         try:

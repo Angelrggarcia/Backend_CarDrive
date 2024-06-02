@@ -35,8 +35,8 @@ class Usuarios(AbstractBaseUser):
     last_name = models.CharField(max_length=40, null=False, default="")
     email = models.EmailField(unique=True, null=False, validators=[validate_email])
     password = models.CharField(_("password"), max_length=128, validators=[MinLengthValidator(6)])
-    color = models.CharField(max_length=6, validators=[RegexValidator(r'^[0-9A-Fa-f]{6}$', 'Enter a valid hex color code')])
-    fecha = models.DateField(null=False,)
+    color = models.CharField(max_length=7, validators=[RegexValidator(r'^#[0-9A-Fa-f]{6}$', 'Enter a valid hex color code')])
+    fecha = models.DateField(null=True,)
     imagen = models.ImageField(null=True, blank=True)
     
     USERNAME_FIELD = 'email'
