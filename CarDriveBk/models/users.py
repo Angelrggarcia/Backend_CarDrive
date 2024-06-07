@@ -44,5 +44,9 @@ class Usuarios(AbstractBaseUser):
     
     objects = UserManager()
 
+    def get_full_name(self):
+        # Devuelve el nombre completo del usuario
+        return f"{self.first_name} {self.last_name}"
+
     def __str__(self):
         return self.first_name

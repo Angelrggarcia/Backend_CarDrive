@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagen_2024-05-22_193922665.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagen_2024-05-23_130446730.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/57766f44-ab14-4d01-a27b-e385da3fa66b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/b915daeb-9139-4a3f-81d0-c3983d7159f7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/c2b9a21e-61dd-4d78-b3e2-22c7e05f827e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_apartados/e322242f-6321-4245-8cb2-d47afd8dd3eb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/1f8656ab-c0eb-4e35-96b1-0778a24ad084.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/5d3f83b9-f738-4b0b-a8e5-23bf01f519ce.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/media/imagenes_proyectos/7d58c420-ed0c-42db-a252-85e2f6d854a6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/archivos.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/archivos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/servicioSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/servicioSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/settings/local.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" afterDir="false" />
     </list>
@@ -31,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Login-Presno" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -44,21 +46,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/angel/OneDrive/Documentos/GitHub/Backend_CarDrive&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/angel/OneDrive/Documentos/GitHub/Backend_CarDrive",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\angel\OneDrive\Documentos\GitHub\Backend_CarDrive" />
@@ -95,6 +98,8 @@
       <workItem from="1715961591389" duration="45264000" />
       <workItem from="1716263318759" duration="2228000" />
       <workItem from="1716427400358" duration="13798000" />
+      <workItem from="1717284478940" duration="6495000" />
+      <workItem from="1717376603468" duration="32040000" />
     </task>
     <servers />
   </component>
@@ -120,10 +125,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py</url>
-          <line>71</line>
+          <line>137</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Backend_CarDrive$.coverage" NAME=" Coverage Results" MODIFIED="1716857135809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
