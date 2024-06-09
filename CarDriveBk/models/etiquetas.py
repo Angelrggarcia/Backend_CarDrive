@@ -12,7 +12,7 @@ class Etiquetas(models.Model):
 
 
 class RelacionesEtiquetas(models.Model):
-    id_archivos = models.ForeignKey(Archivos, on_delete=models.CASCADE)
+    id_archivos = models.ForeignKey(Archivos, on_delete=models.CASCADE, related_name='relaciones_etiquetas')
     id_etiquetas = models.ForeignKey(Etiquetas, on_delete=models.CASCADE)
 
     def __str__(self):

@@ -33,6 +33,7 @@ BASE_APPS = [
 ]
 
 LOCAL_APPS = [
+    'django_filters',
     
 ]
 

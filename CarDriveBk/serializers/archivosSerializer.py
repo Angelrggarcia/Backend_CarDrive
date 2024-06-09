@@ -29,6 +29,7 @@ class ArchivoSerializer(serializers.ModelSerializer):
         return {
             'id': usuario.id,
             'nombre': usuario.get_full_name(),
+            'color': usuario.color,
             'imagen': usuario.imagen.url if usuario.imagen else None,
             'fecha': usuario.fecha
         }

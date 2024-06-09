@@ -1,30 +1,26 @@
 from rest_framework import viewsets, filters, status
-from rest_framework.decorators import action
-from rest_framework.response import Response
 from ..models.archivos import Archivos
 from ..serializers.archivosSerializer import ArchivoSerializer
 
-
+# api/archivos/?search=nombre_del_archivo&id_apartado=valor_del_id_apartado&etiqueta=nombre_de_etiqueta
 class ArchivosView(viewsets.ModelViewSet):
-    queryset = Archivos.objects.all()
+    queryset = Archivos.objects.prefetch_related('relaciones_etiquetas').all()
     serializer_class = ArchivoSerializer
     filter_backends = (filters.SearchFilter,)
-    
-    @action(detail=False, methods=['get'], url_path='busqueda')
-    def busqueda(self, request):
-        nombre = request.query_params.get('nombre', None)
-        if nombre is None:
-            return Response({"detail": "El parámetro 'nombre' es requerido."}, status=status.HTTP_400_BAD_REQUEST)
-        
-        try:
-            archivos = Archivos.objects.filter(nombre__icontains=nombre)
-            if archivos.exists():
-                serializer = ArchivoSerializer(archivos, many=True)
-                return Response(serializer.data, status=status.HTTP_200_OK)
-            else:
-                return Response({"detail": "No se encontraron archivos."}, status=status.HTTP_404_NOT_FOUND)
-        except Exception as e:
-            import logging
-            logger = logging.getLogger(__name__)
-            logger.error(f"Error buscando archivos: {str(e)}")
-            return Response({"detail": "Error interno del servidor."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        search = self.request.query_params.get('search', None)
+        apartado_id = self.request.query_params.get('id_apartado', None)
+        etiqueta_nombre = self.request.query_params.get('etiqueta', None)
+
+        if search:
+            queryset = queryset.filter(nombre__icontains=search)
+        if apartado_id:
+            queryset = queryset.filter(id_apartado=apartado_id)
+        if etiqueta_nombre:
+            queryset = queryset.filter(
+                relaciones_etiquetas__id_etiquetas__nombre__icontains=etiqueta_nombre
+            )
+
+        return queryset
