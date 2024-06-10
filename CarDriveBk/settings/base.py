@@ -102,9 +102,14 @@ ROOT_URLCONF = 'CarDriveBk.urls'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
+# settings.py
+SESSION_SAVE_EVERY_REQUEST = True
+
 
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),  # Duración del token de acceso
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),  # Duración del token de refresco
 }
 
 
