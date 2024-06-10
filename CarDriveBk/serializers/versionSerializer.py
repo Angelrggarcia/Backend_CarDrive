@@ -8,7 +8,7 @@ class VersionSerializer(serializers.ModelSerializer):
     # documents = Base64FileField(required=False)
     class Meta:
         model = Versiones
-        fields = ('id_archivo', 'iteracion', 'archivo')
+        fields = '__all__'
         # widgets = {
         #     'archivo': 
         # }

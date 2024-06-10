@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from ..models import Usuarios
 from ..models.archivos import Archivos
-from ..models.etiquetas import RelacionesEtiquetas
+from ..models.etiquetas import RelacionesEtiquetas, Etiquetas
 from ..models.servicios import Favoritos
 
 
@@ -39,3 +39,16 @@ class ArchivoSerializer(serializers.ModelSerializer):
         if request and hasattr(request, "user") and request.user.is_authenticated:
             return Favoritos.objects.filter(id_usuario=request.user, id_archivo=obj).exists()
         return False
+
+    def create(self, validated_data):
+        etiquetas_data = validated_data.pop('etiquetas', [])  # Usa .get() para evitar KeyError
+        archivo = Archivos.objects.create(**{k: v for k, v in validated_data.items() if k not in ['etiquetas']})
+
+        for etiqueta_data in etiquetas_data:
+            etiqueta, created = Etiquetas.objects.get_or_create(
+                nombre=etiqueta_data['nombre'],
+                defaults={'color': etiqueta_data.get('color', 'default_color')}
+            )
+            RelacionesEtiquetas.objects.create(id_archivos=archivo, id_etiquetas=etiqueta)
+
+        return archivo
