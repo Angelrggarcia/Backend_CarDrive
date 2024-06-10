@@ -67,5 +67,3 @@ class UsuariosView(viewsets.ModelViewSet):
         user = request.user
         serializer = self.get_serializer(user)
         return Response(serializer.data)
-    
-    
