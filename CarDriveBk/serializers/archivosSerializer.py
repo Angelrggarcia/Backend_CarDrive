@@ -13,7 +13,6 @@ class ArchivoSerializer(serializers.ModelSerializer):
     etiquetas = EtiquetaSerializer(many=True, required=False)
     iteracion = serializers.SerializerMethodField()
     usuario_info = serializers.SerializerMethodField(read_only=True)
-    
     id_usuario = serializers.PrimaryKeyRelatedField(
         write_only=True,
         queryset=Usuarios.objects.all(),
@@ -49,7 +48,8 @@ class ArchivoSerializer(serializers.ModelSerializer):
         usuario = obj.id_usuario
         return {
             'id': usuario.id,
-            'nombre': usuario.get_full_name(),
+            'primer_nombre': usuario.first_name,
+            'segundo_nombre': usuario.last_name,
             'color': usuario.color,
             'imagen': usuario.imagen.url if usuario.imagen else None,
             'fecha': usuario.fecha
