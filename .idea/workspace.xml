@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0002_alter_usuarios_color_alter_usuarios_fecha.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0003_alter_usuarios_color.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/migrations/0004_versiones_nombre_alter_archivos_fecha_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,22 +40,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/angel/OneDrive/Documentos/GitHub/Backend_CarDrive",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/angel/OneDrive/Documentos/GitHub/Backend_CarDrive&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\angel\OneDrive\Documentos\GitHub\Backend_CarDrive" />
@@ -95,7 +93,7 @@
       <workItem from="1716263318759" duration="2228000" />
       <workItem from="1716427400358" duration="13798000" />
       <workItem from="1717284478940" duration="6495000" />
-      <workItem from="1717376603468" duration="98546000" />
+      <workItem from="1717376603468" duration="101243000" />
     </task>
     <servers />
   </component>
