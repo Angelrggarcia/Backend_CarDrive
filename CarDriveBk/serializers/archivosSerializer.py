@@ -49,8 +49,7 @@ class ArchivoSerializer(serializers.ModelSerializer):
         usuario = obj.id_usuario
         return {
             'id': usuario.id,
-            'primer_nombre': usuario.first_name,
-            'segundo_nombre': usuario.last_name,
+            'nombre': usuario.get_full_name(),
             'color': usuario.color,
             'imagen': usuario.imagen.url if usuario.imagen else None,
             'fecha': usuario.fecha
