@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0004_versiones_nombre_alter_archivos_fecha_and_more.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/etiquetas.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/etiquetas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/apartadosSerializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/versiones.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/versiones.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/unidadesSerializer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/apartadoView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/archivosView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/views/serviciosView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/versionSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/versionSerializer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +95,7 @@
       <workItem from="1716263318759" duration="2228000" />
       <workItem from="1716427400358" duration="13798000" />
       <workItem from="1717284478940" duration="6495000" />
-      <workItem from="1717376603468" duration="66761000" />
+      <workItem from="1717376603468" duration="85783000" />
     </task>
     <servers />
   </component>
