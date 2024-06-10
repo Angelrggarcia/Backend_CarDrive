@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.db.models import Max
 
-
+from .etiquetasSerializer import EtiquetaSerializer
 from ..models import Usuarios
 from ..models.archivos import Archivos
 from ..models.etiquetas import RelacionesEtiquetas, Etiquetas
@@ -10,7 +10,7 @@ from ..models.versiones import Versiones
 
 
 class ArchivoSerializer(serializers.ModelSerializer):
-    etiquetas = serializers.SerializerMethodField()
+    etiquetas = EtiquetaSerializer(many=True, required=False)
     iteracion = serializers.SerializerMethodField()
     usuario_info = serializers.SerializerMethodField(read_only=True)
     
@@ -28,6 +28,12 @@ class ArchivoSerializer(serializers.ModelSerializer):
         relaciones = RelacionesEtiquetas.objects.filter(id_archivos=obj)
         etiquetas = [{'nombre': rel.id_etiquetas.nombre, 'color': rel.id_etiquetas.color} for rel in relaciones]
         return etiquetas
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        etiquetas_display = self.get_etiquetas(instance)
+        representation['etiquetas'] = etiquetas_display
+        return representation
     
     def get_iteracion(self, obj):
         busqueda = Versiones.objects.filter(id_archivo=obj)
@@ -56,7 +62,7 @@ class ArchivoSerializer(serializers.ModelSerializer):
         return False
 
     def create(self, validated_data):
-        etiquetas_data = validated_data.pop('etiquetas', [])  # Usa .get() para evitar KeyError
+        etiquetas_data = validated_data.pop('etiquetas', [])
         archivo = Archivos.objects.create(**{k: v for k, v in validated_data.items() if k not in ['etiquetas']})
 
         for etiqueta_data in etiquetas_data:

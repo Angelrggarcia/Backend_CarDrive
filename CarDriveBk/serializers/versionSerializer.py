@@ -5,7 +5,8 @@ from ..models.versiones import Versiones
 
 
 class VersionSerializer(serializers.ModelSerializer):
-    # documents = Base64FileField(required=False)
+    archivo = serializers.FileField(max_length=None, allow_empty_file=False, use_url=False)
+
     class Meta:
         model = Versiones
         fields = '__all__'

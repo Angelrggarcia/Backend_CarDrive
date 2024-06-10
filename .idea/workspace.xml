@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a927c08-db19-404e-819e-8b72397e79a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CarDriveBk/migrations/0004_versiones_nombre_alter_archivos_fecha_and_more.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarDriveBk/models/versiones.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/models/versiones.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/archivosSerializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarDriveBk/serializers/versionSerializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/CarDriveBk/serializers/versionSerializer.py" afterDir="false" />
     </list>
@@ -95,7 +93,7 @@
       <workItem from="1716263318759" duration="2228000" />
       <workItem from="1716427400358" duration="13798000" />
       <workItem from="1717284478940" duration="6495000" />
-      <workItem from="1717376603468" duration="85783000" />
+      <workItem from="1717376603468" duration="96383000" />
     </task>
     <servers />
   </component>
