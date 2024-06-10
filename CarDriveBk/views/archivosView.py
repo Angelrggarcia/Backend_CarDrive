@@ -1,6 +1,10 @@
 from rest_framework import viewsets, filters, status
+from rest_framework.response import Response
 from ..models.archivos import Archivos
+from ..models.servicios import Favoritos
 from ..serializers.archivosSerializer import ArchivoSerializer
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.decorators import action
 
 # api/archivos/?search=nombre_del_archivo&id_apartado=valor_del_id_apartado&etiqueta=nombre_de_etiqueta
 class ArchivosView(viewsets.ModelViewSet):
@@ -11,16 +15,74 @@ class ArchivosView(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = super().get_queryset()
         search = self.request.query_params.get('search', None)
+        proyecto_id = self.request.query_params.get('id_proyecto', None)
+        proyecto_nombre = self.request.query_params.get('nombre_proyecto', None)
         apartado_id = self.request.query_params.get('id_apartado', None)
+        apartado_nombre = self.request.query_params.get('nombre_apartado', None)
         etiqueta_nombre = self.request.query_params.get('etiqueta', None)
+        fecha_inicio = self.request.query_params.get('fecha_inicio', None)
+        fecha_fin = self.request.query_params.get('fecha_fin', None)
+        persona = self.request.query_params.get('persona', None)
+        # Filtros para proyectos fecha_inicio, fecha_fin, persona 
 
         if search:
             queryset = queryset.filter(nombre__icontains=search)
+        if proyecto_id:
+            queryset = queryset.filter(id_proyecto=proyecto_id)
+        if proyecto_nombre:
+            queryset = queryset.filter(nombre_proyecto=proyecto_nombre)
         if apartado_id:
             queryset = queryset.filter(id_apartado=apartado_id)
+        if apartado_nombre:
+            queryset = queryset.filter(nombre_apartado=apartado_nombre)
         if etiqueta_nombre:
             queryset = queryset.filter(
-                relaciones_etiquetas__id_etiquetas__nombre__icontains=etiqueta_nombre
-            )
+                relaciones_etiquetas__id_etiquetas__nombre__icontains=etiqueta_nombre)
+        if fecha_inicio:
+            queryset = queryset.filter(fecha__gte=fecha_inicio)
+        if fecha_fin:
+            queryset = queryset.filter(fecha__lte=fecha_fin)
+        if persona:
+            queryset = queryset.filter(nombre_persona=persona)  
+            
 
         return queryset
+    
+    @action(detail=False, methods=['GET'], permission_classes=[IsAuthenticated])
+    def recientes(self, request, format=None):
+        user = request.user
+        latest_files = Archivos.objects.filter(id_usuario=user).order_by('-fecha')[:15]
+        serializer = ArchivoSerializer(latest_files, many=True)
+        return Response(serializer.data)
+    
+    @action(detail=False, methods=['GET'], permission_classes=[IsAuthenticated])
+    def favoritos(self, request, format=None):
+        user = request.user
+        # if user.is_anonymous:
+        #     return Response({'detail': 'Authentication credentials were not provided.'}, status=status.HTTP_401_UNAUTHORIZED)
+
+        favoritos_ids = Favoritos.objects.filter(id_usuario=user).values_list('id_archivo', flat=True)
+        archivos_favoritos = Archivos.objects.filter(id__in=favoritos_ids)
+        serializer = ArchivoSerializer(archivos_favoritos, many=True, context={'request': request})
+        print(serializer.data)
+        return Response(serializer.data)
+    
+    @action(detail=False, methods=['POST'], permission_classes=[IsAuthenticated])
+    def toggle_favorito(self, request, format=None):
+        user = request.user  # Obtener el usuario autenticado
+        id_archivo = request.data.get('id_archivo')  # Corregir la obtención del id_archivo
+        if not id_archivo:
+            return Response({'detail': 'id_archivo es requerido.'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        try:
+            archivo = Archivos.objects.get(id=id_archivo)
+        except Archivos.DoesNotExist:
+            return Response({'detail': 'Archivo no encontrado.'}, status=status.HTTP_404_NOT_FOUND)
+
+        favorito, created = Favoritos.objects.get_or_create(id_usuario=user, id_archivo=archivo)
+        
+        if not created:
+            favorito.delete()
+            return Response({'favorito': False}, status=status.HTTP_200_OK)
+        
+        return Response({'favorito': True}, status=status.HTTP_201_CREATED)
