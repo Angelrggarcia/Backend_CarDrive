@@ -15,3 +15,11 @@ class Apartados(models.Model):
     # Create your models here.
     def __str__(self):
         return self.id.__str__() + " - " + self.nombre.__str__()
+
+    def get_ancestors(self):
+        ancestors = []
+        parent = self.id_padre
+        while parent:
+            ancestors.append(parent)
+            parent = parent.id_padre
+        return ancestors[::-1]  # Reverse the list to start from the root
