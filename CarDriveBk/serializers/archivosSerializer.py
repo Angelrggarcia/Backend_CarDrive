@@ -12,7 +12,7 @@ from ..models.versiones import Versiones
 class ArchivoSerializer(serializers.ModelSerializer):
     etiquetas = EtiquetaSerializer(many=True, required=False)
     iteracion = serializers.SerializerMethodField()
-    usuario_info = serializers.SerializerMethodField(read_only=True)
+    propietario = serializers.SerializerMethodField(read_only=True)
     id_usuario = serializers.PrimaryKeyRelatedField(
         write_only=True,
         queryset=Usuarios.objects.all(),
@@ -21,7 +21,7 @@ class ArchivoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Archivos
-        fields = ['id', 'nombre', 'descripcion', 'terminacion', 'fecha', 'usuario_info', 'id_usuario', 'etiquetas', 'favorito', 'id_apartado', 'iteracion']
+        fields = ['id', 'nombre', 'descripcion', 'terminacion', 'fecha', 'propietario', 'id_usuario', 'etiquetas', 'favorito', 'id_apartado', 'iteracion']
 
     def get_etiquetas(self, obj):
         relaciones = RelacionesEtiquetas.objects.filter(id_archivos=obj)
@@ -44,7 +44,7 @@ class ArchivoSerializer(serializers.ModelSerializer):
     
         return  iteracion_max
 
-    def get_usuario_info(self, obj):
+    def get_propietario(self, obj):
         usuario = obj.id_usuario
         return {
             'id': usuario.id,
